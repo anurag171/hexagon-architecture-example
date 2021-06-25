@@ -1,6 +1,7 @@
 package com.hexagon.architecture.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,17 +16,18 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public void addBook(Book book) {
 
-		bookRepository.addBook(book);
+		bookRepository.save(book);
 	}
 
 	@Override
 	public Book getBook(String title) {
-		return bookRepository.getBook(title);
+		Optional<Book> bookOptional = bookRepository.findById(title);
+		return bookOptional.isPresent() ? bookOptional.get() : null;
 	}
 
 	@Override
 	public List<Book> getBooks() {
-		return bookRepository.getBooks();
+		return bookRepository.findAll();
 	}
 
 }

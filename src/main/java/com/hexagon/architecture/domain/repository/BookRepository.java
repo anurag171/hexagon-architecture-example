@@ -1,14 +1,9 @@
 package com.hexagon.architecture.domain.repository;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.hexagon.architecture.domain.Book;
 
-public interface BookRepository {
+public interface BookRepository extends JpaRepository<Book, String> {
 
-	void addBook(Book book);
-
-	Book getBook(String title);
-
-	List<Book> getBooks();
 }

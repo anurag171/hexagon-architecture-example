@@ -3,6 +3,7 @@ package com.hexagon.architecture.domain;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import lombok.Data;
 
@@ -10,6 +11,7 @@ import lombok.Data;
 @Data
 public class Book {
 
+	@Id
 	private String title;
 	private String refNumber;
 	private String author;
