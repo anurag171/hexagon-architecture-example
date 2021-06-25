@@ -8,23 +8,23 @@ import java.util.stream.Collectors;
 import com.hexagon.architecture.domain.Book;
 
 public class BookRepositoryImpl implements BookRepository {
-    
-    private Map<String, Book> bookDB = new HashMap<>();
 
-    @Override
-    public void addBook(Book book) {
-        bookDB.put(book.getTitle(), book);
-    }
+	private Map<String, Book> bookDB = new HashMap<>();
 
-    @Override
-    public Book getBook(String title) {        
-        return bookDB.get(title);
-    }
+	@Override
+	public void addBook(Book book) {
+		bookDB.put(book.getTitle(), book);
+	}
 
-    @Override
-    public List<Book> getBooks() {
-        
-        return bookDB.values().stream().collect(Collectors.toList());
-    }
+	@Override
+	public Book getBook(String title) {
+		return bookDB.get(title);
+	}
+
+	@Override
+	public List<Book> getBooks() {
+
+		return bookDB.values().stream().collect(Collectors.toList());
+	}
 
 }

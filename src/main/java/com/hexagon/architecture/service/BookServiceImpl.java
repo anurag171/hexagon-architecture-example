@@ -8,24 +8,24 @@ import com.hexagon.architecture.domain.Book;
 import com.hexagon.architecture.domain.repository.BookRepository;
 
 public class BookServiceImpl implements BookService {
-    
-    @Autowired
-    BookRepository bookRepository;
 
-    @Override
-    public void addBook(Book book) {
-        
-        bookRepository.addBook(book);
-    }
+	@Autowired
+	BookRepository bookRepository;
 
-    @Override
-    public Book getBook(String title) {
-        return bookRepository.getBook(title);
-    }
+	@Override
+	public void addBook(Book book) {
 
-    @Override
-    public List<Book> getBooks() {
-        return bookRepository.getBooks();
-    }
+		bookRepository.addBook(book);
+	}
+
+	@Override
+	public Book getBook(String title) {
+		return bookRepository.getBook(title);
+	}
+
+	@Override
+	public List<Book> getBooks() {
+		return bookRepository.getBooks();
+	}
 
 }

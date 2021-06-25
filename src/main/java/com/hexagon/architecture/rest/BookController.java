@@ -17,21 +17,22 @@ import com.hexagon.architecture.service.BookService;
 @RequestMapping("/book")
 public class BookController {
 
-    @Autowired
-    BookService bookService;
+	@Autowired
+	BookService bookService;
 
-    @PostMapping 
-    public void addBook(@RequestBody Book book) { 
-        bookService.addBook(book);        
-    } 
+	@PostMapping
+	public void addBook(@RequestBody Book book) {
+		bookService.addBook(book);
+	}
 
-    @GetMapping("/{title}") 
-    public Book getBook(@PathVariable String title) { 
-        return bookService.getBook(title); 
-    } 
+	@GetMapping("/{title}")
+	public Book getBook(@PathVariable String title) {
+		return bookService.getBook(title);
+	}
 
-    @GetMapping public List<Book> getBooks() { 
-        return bookService.getBooks(); 
-    }
+	@GetMapping
+	public List<Book> getBooks() {
+		return bookService.getBooks();
+	}
 
 }
