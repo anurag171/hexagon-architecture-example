@@ -1,12 +1,12 @@
-package com.hexagon.architecture.service;
+package com.baeldung.hexagon.architecture.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.hexagon.architecture.domain.Book;
-import com.hexagon.architecture.domain.repository.BookRepository;
+import com.baeldung.hexagon.architecture.domain.entity.Book;
+import com.baeldung.hexagon.architecture.domain.entity.repository.BookRepository;
 
 public class BookServiceImpl implements BookService {
 

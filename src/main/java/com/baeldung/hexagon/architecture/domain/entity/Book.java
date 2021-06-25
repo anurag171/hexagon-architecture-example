@@ -1,4 +1,4 @@
-package com.hexagon.architecture.domain;
+package com.baeldung.hexagon.architecture.domain.entity;
 
 import java.util.Date;
 

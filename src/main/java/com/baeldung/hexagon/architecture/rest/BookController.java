@@ -1,4 +1,4 @@
-package com.hexagon.architecture.rest;
+package com.baeldung.hexagon.architecture.rest;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hexagon.architecture.domain.Book;
-import com.hexagon.architecture.service.BookService;
+import com.baeldung.hexagon.architecture.domain.entity.Book;
+import com.baeldung.hexagon.architecture.service.BookService;
 
 @RestController
 @RequestMapping("/book")
